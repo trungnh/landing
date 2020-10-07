@@ -1,0 +1,6 @@
+﻿Ngày | Tên | Số Điện Thoại | Địa Chỉ | Ghi Chú | URL | IP
+2020-10-06 17:48:09 | form 1 | 039892546 | 123123 | 123123 | https://favimart.site/product/cooking-bowl/ | 42.114.171.51
+2020-10-06 17:48:47 | qwe | 3213213211 | 123123a | 12313 | https://favimart.site/product/cooking-bowl/ | 42.114.171.51
+2020-10-06 17:49:23 | form1 | 12312312323 | asdasdad | asfsdf | https://favimart.site/product/cooking-bowl.html | 42.114.171.51
+2020-10-06 17:49:50 | dfgdgd | 1123123 | gdfgdfgdf | dfgdfgdfg | https://favimart.site/product/cooking-bowl.html | 42.114.171.51
+Array
