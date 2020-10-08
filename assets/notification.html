@@ -1,0 +1,11 @@
+<div id="notify" class="element notify-transition" style="opacity: 0; top: -162px;">
+   <div class="notify">
+	  <div class="notify-image"><img src="/notification/1.jpg"></div>
+	  <div class="notify-title">Toàn Nguyễn</div>
+	  <div class="notify-content">O36888797x</div>
+	  <div class="notify-time">1 phút trước</div>
+   </div>
+</div>
+<script>
+setTimeout(function(){document.getElementById("notify").style.opacity="1",document.getElementById("notify").style.top=null,setTimeout(function(){document.getElementById("notify").style.opacity="0",document.getElementById("notify").style.top="-162px"},5e3)},5e3),setInterval(function(){var t=notifObj[Math.floor(Math.random()*notifObj.length)];$(".notify-image img").attr("src",t.image),$(".notify-title").html(t.title),$(".notify-content").html(t.content),$(".notify-time").html(t.time),document.getElementById("notify").style.opacity="1",document.getElementById("notify").style.top=null,setTimeout(function(){document.getElementById("notify").style.opacity="0",document.getElementById("notify").style.top="-162px"},5e3)},15e3);var notifObj=[{image:"/notification/3.jpg",title:"Thị Hương",content:"Ship 1 bộ về CC An Bình City",time:"2 phút trước"},{image:"/notification/2.jpg",title:"Chị Nhung",content:"Ship cho tôi 2 cái",time:"1 phút trước"},{image:"/notification/4.jpg",title:"Thảo Thanh",content:"09821579xx Bán mình 2 bộ",time:"1 phút trước"},{image:"/notification/1.jpg",title:"Toàn Nguyễn",content:"O36888797x",time:"1 phút trước"},{image:"/notification/5.jpg",title:"Ngọc Tuấn",content:"090400826x Bán A 1 bộ",time:"20 giây trước"},{image:"/notification/6.jpg",title:"Hồng Phạm",content:"Cho Anh đặt 5 bộ về ...",time:"1 phút trước"},{image:"/notification/7.jpg",title:"Thu Thủy",content:"09821579xx Mình đặt 1 bộ",time:"1 phút trước"}];
+</script>

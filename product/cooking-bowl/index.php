@@ -2,6 +2,7 @@
 <?php
 session_start();
 $product_path = '/product/' . basename(dirname(__FILE__)) . '/';
+$product_dir = dirname(__DIR__) . '/';
 $meta = [
 	'title' => 'BỘ 5 TÔ THỦY TINH COOKING BOWL', // Tiêu đề trang
 	'description' => 'BỘ 5 TÔ THỦY TINH COOKING BOWL', // Mô tả trang
@@ -58,7 +59,7 @@ function generateKey()
 	  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open Sans:bold,regular|Roboto:bold,regular|Tinos:bold,regular|Source Sans Pro:bold,regular&display=swap" as="style" onload="this.onload = null;this.rel
 	  = 'stylesheet';">
 	  <style type="text/css">
-	  <?php echo file_get_contents('style.css');?>
+	  <?php echo file_get_contents($product_dir . '../assets/style.css');?>
 	  </style>
 	  <script type='text/javascript'>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');<?php echo $pixel_view_string;?>fbq("track", "ViewContent");</script>
 	  <script type='text/javascript'>
@@ -385,26 +386,16 @@ function generateKey()
 				<button class="message-close" onclick="closePopup();">OK</button>
 			</div>
 		</div>
-		<div id="notify" class="element notify-transition" style="opacity: 0; top: -162px;">
-		   <div class="notify">
-			  <div class="notify-image"><img src="/notification/1.jpg"></div>
-			  <div class="notify-title">Toàn Nguyễn</div>
-			  <div class="notify-content">O36888797x</div>
-			  <div class="notify-time">1 phút trước</div>
-		   </div>
-		</div>
 	</div>
 	<link href="https://fonts.googleapis.com/css?family=Open Sans:bold,regular|Roboto:bold,regular|Tinos:bold,regular|Source Sans Pro:bold,regular&amp;display=swap" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-	<style>
-	
-	</style>
+	<?php echo file_get_contents($product_dir . '../assets/notification.html');?>
 	<script type="text/javascript">
-		<?php echo file_get_contents('countDown.min.js');?>
+		<?php echo file_get_contents($product_dir . '../assets/countDown.min.js');?>
 	</script>
-	<script>function gotoForm(){$("html,body").animate({scrollTop:$("#headline2").offset().top},"slow")}function openPopup(){$(".overlay").addClass("active")}function closePopup(){$(".overlay").removeClass("active")}function serializeToJson(t){var e="{";for(var n in t){var o=t[n];e+='"'+o.name+'":"'+o.value+'",'}var i=e.length-1;return e=e.substr(0,i),e+="}",console.log("_string: ",e),JSON.parse(e)}$("#button3").click(function(){if(!$("#button3").hasClass("disabled")){$("#button3").addClass("disabled"),$(".loading").addClass("active");var t=serializeToJson($("#purchase-form1 form").serializeArray()),e=!0;""!=t.name&&""!=t.phone&&""!=t.street||(e=!1),1==e?$.post(ACTION_PATH,t,function(t,e){fbq("track","Purchase",{value:<?php echo $meta['tracking_price'];?>,currency:"VND"}),openPopup(),$("#button3").removeClass("disabled"),$(".loading").removeClass("active")}):alert("Bạn hãy nhập đầy đủ thông tin nhé!")}}),$("#button9").click(function(){if(!$("#button9").hasClass("disabled")){$("#button9").addClass("disabled"),$(".loading").addClass("active");var t=serializeToJson($("#purchase-form2 form").serializeArray()),e=!0;""!=t.name&&""!=t.phone&&""!=t.street||(e=!1),1==e?$.post(ACTION_PATH,t,function(t,e){fbq("track","Purchase",{value:<?php echo $meta['tracking_price'];?>,currency:"VND"}),openPopup(),$("#button9").removeClass("disabled"),$(".loading").removeClass("active")}):alert("Bạn hãy nhập đầy đủ thông tin nhé!")}});var cd=new Countdown({cont:document.querySelector(".countdown"),countdown:!1,date:Date.now()-2e7,outputTranslation:{hour:"Giờ",minute:"Phút",second:"Giây"},endCallback:null,outputFormat:"hour|minute|second"});cd.start(),setTimeout(function(){document.getElementById("notify").style.opacity="1",document.getElementById("notify").style.top=null,setTimeout(function(){document.getElementById("notify").style.opacity="0",document.getElementById("notify").style.top="-162px"},5e3)},5e3),setInterval(function(){var t=notifObj[Math.floor(Math.random()*notifObj.length)];$(".notify-image img").attr("src",t.image),$(".notify-title").html(t.title),$(".notify-content").html(t.content),$(".notify-time").html(t.time),document.getElementById("notify").style.opacity="1",document.getElementById("notify").style.top=null,setTimeout(function(){document.getElementById("notify").style.opacity="0",document.getElementById("notify").style.top="-162px"},5e3)},15e3);var notifObj=[{image:"/notification/3.jpg",title:"Thị Hương",content:"Ship 1 bộ về CC An Bình City",time:"2 phút trước"},{image:"/notification/2.jpg",title:"Chị Nhung",content:"Ship cho tôi 2 cái",time:"1 phút trước"},{image:"/notification/4.jpg",title:"Thảo Thanh",content:"09821579xx Bán mình 2 bộ",time:"1 phút trước"},{image:"/notification/1.jpg",title:"Toàn Nguyễn",content:"O36888797x",time:"1 phút trước"},{image:"/notification/5.jpg",title:"Ngọc Tuấn",content:"090400826x Bán A 1 bộ",time:"20 giây trước"},{image:"/notification/6.jpg",title:"Hồng Phạm",content:"Cho Anh đặt 5 bộ về ...",time:"1 phút trước"},{image:"/notification/7.jpg",title:"Thu Thủy",content:"09821579xx Mình đặt 1 bộ",time:"1 phút trước"}];</script>
+	<script>function gotoForm(){$("html,body").animate({scrollTop:$("#headline2").offset().top},"slow")}function openPopup(){$(".overlay").addClass("active")}function closePopup(){$(".overlay").removeClass("active")}function serializeToJson(t){var e="{";for(var n in t){var o=t[n];e+='"'+o.name+'":"'+o.value+'",'}var i=e.length-1;return e=e.substr(0,i),e+="}",console.log("_string: ",e),JSON.parse(e)}$("#button3").click(function(){if(!$("#button3").hasClass("disabled")){$("#button3").addClass("disabled"),$(".loading").addClass("active");var t=serializeToJson($("#purchase-form1 form").serializeArray()),e=!0;""!=t.name&&""!=t.phone&&""!=t.street||(e=!1),1==e?$.post(ACTION_PATH,t,function(t,e){fbq("track","Purchase",{value:<?php echo $meta['tracking_price'];?>,currency:"VND"}),openPopup(),$("#button3").removeClass("disabled"),$(".loading").removeClass("active")}):alert("Bạn hãy nhập đầy đủ thông tin nhé!")}}),$("#button9").click(function(){if(!$("#button9").hasClass("disabled")){$("#button9").addClass("disabled"),$(".loading").addClass("active");var t=serializeToJson($("#purchase-form2 form").serializeArray()),e=!0;""!=t.name&&""!=t.phone&&""!=t.street||(e=!1),1==e?$.post(ACTION_PATH,t,function(t,e){fbq("track","Purchase",{value:<?php echo $meta['tracking_price'];?>,currency:"VND"}),openPopup(),$("#button9").removeClass("disabled"),$(".loading").removeClass("active")}):alert("Bạn hãy nhập đầy đủ thông tin nhé!")}});var cd=new Countdown({cont:document.querySelector(".countdown"),countdown:!1,date:Date.now()-2e7,outputTranslation:{hour:"Giờ",minute:"Phút",second:"Giây"},endCallback:null,outputFormat:"hour|minute|second"});cd.start();</script>
 	
 	
 </body>
